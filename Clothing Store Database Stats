@@ -1,0 +1,25 @@
+Create a Clothing STore Database
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity_in_stock INTEGER, color TEXT, number_sold INTEGER);
+
+INSERT INTO inventory VALUES (1,"blouse",8.99,4,"blue",6);
+INSERT INTO inventory VALUES (2,"skirt",5.99,5,"black",5);
+INSERT INTO inventory VALUES (3, "boots",10.99,7,"black",3);
+INSERT INTO inventory VALUES (4, "socks", 1.99,8,"white",2);
+INSERT INTO inventory VALUES (5,"coat",15.99,6,"tan",4);
+INSERT INTO inventory VALUES (6,"hat",9.99,10,"black",0);
+INSERT INTO inventory VALUES (7, "gloves", 7.99,4,"black",6);
+INSERT INTO inventory VALUES (8, "tennis_shoes", 15.99,8,"grey",2);
+INSERT INTO inventory VALUES (9, "leggings", 8.99, 7,"black",3);
+INSERT INTO inventory VALUES (10,"sandals", 5.99,4,"pink",6);
+INSERT INTO inventory VALUES (11,"head wrap",6.99,3,"yellow",7);
+INSERT INTO inventory VALUES (12,"scarf",4.99,4,"teal",6);
+INSERT INTO inventory VALUES (13,"ear warmers",8.99,5,"white",5);
+INSERT INTO inventory VALUES (14,"pants",11.99,9,"black",1);
+INSERT INTO inventory VALUES (15,"sweater",17.99,4,"green",6);
+
+-display the database odered by price descending with products where 5 or more items sold-
+SELECT * FROM inventory ORDER BY price;
+SELECT * FROM inventory WHERE number_sold >=5 ORDER BY price desc;
+-update invenotry to reflect a sale-
+UPDATE inventory SET quantity_in_stock = 2 WHERE id=11
